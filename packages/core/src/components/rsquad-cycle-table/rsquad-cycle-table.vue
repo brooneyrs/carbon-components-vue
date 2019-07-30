@@ -85,7 +85,7 @@ import Close16 from '@carbon/icons-vue/es/close/16';
 const rows = children => children.filter(child => child.isCvDataTableRow);
 
 export default {
-  name: 'CvDataTable',
+  name: 'rsquad-cycle-table',
   components: {
     CvButton,
     CvDataTableHeading,
