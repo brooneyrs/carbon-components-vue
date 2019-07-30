@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import checkmark from '@/assets/images/checkmark--solid-small.svg';
-import warn from '@/assets/images/warning--solid-small.svg';
-import close from '@/assets/images/close--solid-small.svg';
-import na from '@/assets/images/help--glyph-small.svg';
+import checkmark from '../assets/images/checkmark--solid-small.svg';
+import warn from '../assets/images/warning--solid-small.svg';
+import close from '../assets/images/close--solid-small.svg';
+import na from '../assets/images/help--glyph-small.svg';
 export default {
   name: 'CvDataTableCell',
   props: {

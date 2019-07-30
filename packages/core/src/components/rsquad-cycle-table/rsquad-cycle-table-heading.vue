@@ -30,10 +30,10 @@
 import ArrowDown16 from '@carbon/icons-vue/es/arrow--down/16';
 import Arrows16 from '@carbon/icons-vue/es/arrows/16';
 
-import checkmark from '@/assets/images/checkmark--solid-small.svg';
-import warn from '@/assets/images/warning--solid-small.svg';
-import close from '@/assets/images/close--solid-small.svg';
-import na from '@/assets/images/help--glyph-small.svg';
+import checkmark from '../assets/images/checkmark--solid-small.svg';
+import warn from '../assets/images/warning--solid-small.svg';
+import close from '../assets/images/close--solid-small.svg';
+import na from '../assets/images/help--glyph-small.svg';
 
 const nextSortOrder = {
   ascending: 'descending',
