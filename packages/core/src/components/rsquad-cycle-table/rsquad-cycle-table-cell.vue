@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import checkmark from '../assets/images/checkmark--solid-small.svg';
-import warn from '../assets/images/warning--solid-small.svg';
-import close from '../assets/images/close--solid-small.svg';
-import na from '../assets/images/help--glyph-small.svg';
+import checkmark from '@carbon/icons-vue/es/checkmark--filled/16';
+import warn from '@carbon/icons-vue/es/warning--filled/16';
+import close from '@carbon/icons-vue/es/close--filled/16';
+import na from '@carbon/icons-vue/es/help--filled/16';
 export default {
   name: 'CvDataTableCell',
   props: {
