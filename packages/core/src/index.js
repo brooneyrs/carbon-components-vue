@@ -40,6 +40,12 @@ import {
   CvDataTableAction,
   CvDataTableSkeleton,
 } from './components/cv-data-table';
+import {
+  RSquadCycleTableAction,
+  RSquadCycleTableCell,
+  RSquadCycleTableRow,
+  RSquadCycleTable,
+} from './components/rsquad-cycle-table';
 import { CvDatePicker } from './components/cv-date-picker';
 import { CvDropdown, CvDropdownItem, CvDropdownSkeleton } from './components/cv-dropdown';
 import { CvFileUploader, CvFileUploaderSkeleton } from './components/cv-file-uploader';
@@ -107,6 +113,7 @@ export { CvCodeSnippet, CvCodeSnippetSkeleton };
 export { CvComboBox };
 export { CvContentSwitcher, CvContentSwitcherButton, CvContentSwitcherContent };
 export { CvDataTable, CvDataTableRow, CvDataTableCell, CvDataTableAction, CvDataTableSkeleton };
+export { RSquadCycleTableAction, RSquadCycleTableCell, RSquadCycleTableRow, RSquadCycleTable };
 export { CvDatePicker };
 export { CvDropdown, CvDropdownItem, CvDropdownSkeleton };
 export { CvFileUploader, CvFileUploaderSkeleton };
