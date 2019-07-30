@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import CvDataTable from './cv-data-table';
+import CvDataTable from './rsquad-cycle-table';
 
 const DEFAULTS = {
   COLS: 5,

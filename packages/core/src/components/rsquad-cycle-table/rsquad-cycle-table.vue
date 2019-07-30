@@ -71,9 +71,9 @@
 </template>
 
 <script>
-import CvDataTableHeading from './_cv-data-table-heading';
-import CvDataTableRow from './cv-data-table-row';
-import CvDataTableCell from './cv-data-table-cell';
+import CvDataTableHeading from './rsquad-cycle-table-heading';
+import CvDataTableRow from './rsquad-cycle-table-row';
+import CvDataTableCell from './rsquad-cycle-table-cell';
 import CvButton from '../cv-button/cv-button';
 import CvCheckbox from '../cv-checkbox/cv-checkbox';
 import CvPagination from '../cv-pagination/cv-pagination';
