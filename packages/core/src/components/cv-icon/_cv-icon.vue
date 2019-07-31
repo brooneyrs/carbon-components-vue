@@ -6,7 +6,7 @@
 </template>
 
 <script>
-const spritePath = require('../../assets/images/component-icons.svg');
+const spritePath = require('../../component-icons.svg');
 
 export default {
   name: 'CvIcon',
