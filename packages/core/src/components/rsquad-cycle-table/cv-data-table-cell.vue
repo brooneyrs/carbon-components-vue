@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import checkmark from '@rocketsoftware/icons-vue/checkmark--filled/16';
-import warn from '@rocketsoftware/icons-vue/warning--filled/16';
-import close from '@rocketsoftware/icons-vue/close--filled/16';
-import na from '@rocketsoftware/icons-vue/help--filled/16';
+import checkmark from '@rocketsoftware/icons-vue/es/checkmark--filled/16';
+import warn from '@rocketsoftware/icons-vue/es/warning--filled/16';
+import close from '@rocketsoftware/icons-vue/es/close--filled/16';
+import na from '@rocketsoftware/icons-vue/es/help--filled/16';
 export default {
   name: 'CvDataTableCell',
   props: {
