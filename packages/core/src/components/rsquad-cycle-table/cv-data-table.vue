@@ -7,80 +7,6 @@
           <slot name="helper-text">{{ helperText }}</slot>
         </p>
       </div>
-
-      <!--      <section class="bx&#45;&#45;table-toolbar">-->
-      <!--        <div v-if="batchActive" :style="{ minHeight: '48px', maxWidth: '0' }" />-->
-
-      <!--        <div-->
-      <!--          v-if="hasBatchActions"-->
-      <!--          class="bx&#45;&#45;batch-actions"-->
-      <!--          :class="{ 'bx&#45;&#45;batch-actions&#45;&#45;active': batchActive }"-->
-      <!--          aria-label="Table Action Bar"-->
-      <!--        >-->
-      <!--          <div class="bx&#45;&#45;action-list">-->
-      <!--            <slot name="batch-actions" />-->
-      <!--            <cv-button class="bx&#45;&#45;batch-summary__cancel" small @click="deselect">Cancel</cv-button>-->
-      <!--          </div>-->
-      <!--          <div class="bx&#45;&#45;batch-summary">-->
-      <!--            <p class="bx&#45;&#45;batch-summary__para">-->
-      <!--              <span data-items-selected>{{ dataRowsSelected.length }}</span>-->
-      <!--              items selected-->
-      <!--            </p>-->
-      <!--          </div>-->
-      <!--        </div>-->
-
-      <!--        <div v-if="($slots.actions || $listeners.search) && !batchActive" class="bx&#45;&#45;toolbar-content">-->
-      <!--          <div-->
-      <!--            v-if="$listeners.search"-->
-      <!--            :class="{-->
-      <!--              'bx&#45;&#45;toolbar-search-container-active': searchActive,-->
-      <!--              'bx&#45;&#45;toolbar-search-container-persistent': !expandingSearch,-->
-      <!--              'bx&#45;&#45;toolbar-search-container-expandable': expandingSearch,-->
-      <!--            }"-->
-      <!--            ref="searchContainer"-->
-      <!--          >-->
-      <!--            <div data-search class="bx&#45;&#45;search bx&#45;&#45;search&#45;&#45;sm" role="search">-->
-      <!--              <div-->
-      <!--                class="bx&#45;&#45;search-magnifier"-->
-      <!--                tabindex="0"-->
-      <!--                @click="checkSearchExpand(true)"-->
-      <!--                @keydown.enter.prevent="checkSearchExpand(true)"-->
-      <!--                @keydown.space.prevent-->
-      <!--                @keyup.space.prevent="checkSearchExpand(true)"-->
-      <!--                @blur="checkSearchFocus"-->
-      <!--                ref="magnifier"-->
-      <!--              >-->
-      <!--                <Search16 class="bx&#45;&#45;toolbar-action__icon" />-->
-      <!--              </div>-->
-      <!--              <label :for="uid" class="bx&#45;&#45;label">Search</label>-->
-      <!--              <input-->
-      <!--                class="bx&#45;&#45;search-input"-->
-      <!--                type="text"-->
-      <!--                :id="uid"-->
-      <!--                role="search"-->
-      <!--                placeholder="Search"-->
-      <!--                :aria-labelledby="uid"-->
-      <!--                ref="search"-->
-      <!--                v-model="searchValue"-->
-      <!--                @input="onSearch"-->
-      <!--                @blur="checkSearchFocus"-->
-      <!--                @keydown.esc.prevent="checkSearchExpand(false)"-->
-      <!--              />-->
-      <!--              <button-->
-      <!--                class="bx&#45;&#45;search-close"-->
-      <!--                :class="{ 'bx&#45;&#45;search-close&#45;&#45;hidden': !clearSearchVisible }"-->
-      <!--                title="Clear search input"-->
-      <!--                aria-label="Clear search input"-->
-      <!--                @click="onClearClick"-->
-      <!--              >-->
-      <!--                <Close16 />-->
-      <!--              </button>-->
-      <!--            </div>-->
-      <!--          </div>-->
-      <!--          <slot name="actions" />-->
-      <!--        </div>-->
-      <!--      </section>-->
-
       <table class="bx--data-table" :class="modifierClasses">
         <thead>
           <tr>
@@ -118,22 +44,6 @@
               ref="dataRows"
               :overflow-menu="overflowMenu"
             >
-              <!--              <div v-for="(cell, colIndex) in row">-->
-              <!--                <div v-if="(cycle.status === cell) || cell === 0">-->
-              <!--                  <cv-data-table-cell-->
-              <!--                    :key="`cell:${colIndex}:${rowIndex}`"-->
-              <!--                    :style="dataStyle(colIndex)"-->
-              <!--                    >{{ cell }}</cv-data-table-cell-->
-              <!--                  >-->
-              <!--                </div>-->
-              <!--                <div v-else>-->
-              <!--                  <cv-data-table-cell-->
-              <!--                    :key="`cell:${colIndex}:${rowIndex}`"-->
-              <!--                    :style="dataStyle(colIndex)"-->
-              <!--                    >{{ cell }}</cv-data-table-cell-->
-              <!--                  >-->
-              <!--                </div>-->
-              <!--              </div>-->
               <cv-data-table-cell
                 v-for="(cell, colIndex) in row"
                 :key="`cell:${colIndex}:${rowIndex}`"
@@ -176,7 +86,7 @@ import Close16 from '@carbon/icons-vue/es/close/16';
 const rows = children => children.filter(child => child.isCvDataTableRow);
 
 export default {
-  name: 'RSquadCycleTable',
+  name: 'RsquadCycleTable',
   components: {
     CvButton,
     CvDataTableHeading,
