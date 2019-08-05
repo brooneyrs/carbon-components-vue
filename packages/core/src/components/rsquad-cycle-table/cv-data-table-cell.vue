@@ -6,6 +6,19 @@
       <close v-else-if="getStatus" class="status__icon-color--red small" />
       <na v-else class="status__icon-color--na small" />
     </div>
+    <div v-if="cycle.publish_method === 'taf' && this.$slots.default[0].text === cycle.name">
+      <router-link
+        :to="{
+          name: 'executions',
+          params: {
+            releaseID: releaseID,
+            projectID: productID,
+            cycleID: cycle.id,
+            executionID: getID(cycle.name_slug),
+          },
+        }"
+      ></router-link>
+    </div>
     <slot />
   </td>
 </template>
@@ -20,6 +33,9 @@ export default {
   props: {
     cellStyle: {},
     cycle: Object,
+    colIndex: Number,
+    productID: [Number, String],
+    releaseID: [Number, String],
   },
   components: {
     checkmark,
@@ -30,6 +46,9 @@ export default {
   computed: {
     getStatus: function() {
       return parseInt(this.$slots.default[0].text.substring(0, this.$slots.default[0].text.length - 1));
+    },
+    getID: function(name) {
+      return this.cycle.exectuions.filter(exec => exec.name_slug === name).id;
     },
   },
 };

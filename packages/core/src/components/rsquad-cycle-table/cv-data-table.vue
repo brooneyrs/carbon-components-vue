@@ -49,6 +49,9 @@
                 :key="`cell:${colIndex}:${rowIndex}`"
                 :style="dataStyle(colIndex)"
                 :cycle="cycle"
+                :colIndex="colIndex"
+                :productID="productID"
+                :releaseID="releaseID"
                 >{{ cell }}</cv-data-table-cell
               >
             </cv-data-table-row>
