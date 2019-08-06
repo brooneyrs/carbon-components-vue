@@ -5,8 +5,9 @@
       <warn v-else-if="getStatus > 79" class="status__icon-color--yellow small" />
       <close v-else-if="getStatus" class="status__icon-color--red small" />
       <na v-else class="status__icon-color--na small" />
+      <slot />
     </div>
-    <div v-if="cycle.publish_method === 'taf' && this.$slots.default[0].text === cycle.name">
+    <div v-else-if="colIndex === 0 && cycle.executions[0].publish_method === 'taf'">
       <router-link
         :to="{
           name: 'executions',
@@ -17,9 +18,10 @@
             executionID: getID(cycle.name_slug),
           },
         }"
-      ></router-link>
+        >{{ this.$slots.default[0].text }}</router-link
+      >
     </div>
-    <slot />
+    <slot v-else />
   </td>
 </template>
 
@@ -47,8 +49,11 @@ export default {
     getStatus: function() {
       return parseInt(this.$slots.default[0].text.substring(0, this.$slots.default[0].text.length - 1));
     },
+  },
+  methods: {
     getID: function(name) {
-      return this.cycle.exectuions.filter(exec => exec.name_slug === name).id;
+      console.log(this.cycle.executions[0].id);
+      return this.cycle.executions[0].id;
     },
   },
 };
