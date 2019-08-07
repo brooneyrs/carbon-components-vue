@@ -27,7 +27,7 @@
               :order="column.order"
               @sort="val => onSort(index, val)"
               :style="headingStyle(index)"
-              :productID="productID"
+              :projectID="projectID"
               :releaseID="releaseID"
               :cycle="cycle"
             />
@@ -50,7 +50,7 @@
                 :style="dataStyle(colIndex)"
                 :cycle="cycle"
                 :colIndex="colIndex"
-                :productID="productID"
+                :projectID="projectID"
                 :releaseID="releaseID"
                 >{{ cell }}</cv-data-table-cell
               >
@@ -103,7 +103,7 @@ export default {
   },
   mixins: [uidMixin],
   props: {
-    productID: [Number, String],
+    projectID: [Number, String],
     releaseID: [Number, String],
     cycle: Object,
     autoWidth: Boolean,

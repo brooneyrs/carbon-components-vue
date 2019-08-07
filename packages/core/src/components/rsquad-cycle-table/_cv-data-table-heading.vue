@@ -8,7 +8,7 @@
     <span v-else class="bx--table-header-label">
       <div v-if="heading.substring(0, cycle.name.length) === cycle.name" class="cycleHeader">
         <router-link
-          :to="{ name: 'cycles', params: { releaseID: releaseID, projectID: productID, cycleID: cycle.id } }"
+          :to="{ name: 'cycles', params: { releaseID: releaseID, projectID: projectID, cycleID: cycle.id } }"
         >
           {{ heading.substring(0, cycle.name.length) }} </router-link
         >{{ heading.substring(cycle.name.length) }}
@@ -45,7 +45,7 @@ export default {
   name: 'CvDataTableHeading',
   components: { ArrowDown16, Arrows16, checkmark, warn, close, na },
   props: {
-    productID: [Number, String],
+    projectID: [Number, String],
     releaseID: [Number, String],
     cycle: Object,
     heading: { type: String, required: true },

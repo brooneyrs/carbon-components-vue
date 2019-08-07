@@ -13,7 +13,7 @@
           name: 'executions',
           params: {
             releaseID: releaseID,
-            projectID: productID,
+            projectID: projectID,
             cycleID: cycle.id,
             executionID: getID(cycle.name_slug),
           },
@@ -36,7 +36,7 @@ export default {
     cellStyle: {},
     cycle: Object,
     colIndex: Number,
-    productID: [Number, String],
+    projectID: [Number, String],
     releaseID: [Number, String],
   },
   components: {
