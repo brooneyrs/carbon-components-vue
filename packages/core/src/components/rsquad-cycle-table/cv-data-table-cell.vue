@@ -7,7 +7,7 @@
       <na v-else class="status__icon-color--na small" />
       <slot />
     </div>
-    <div v-else-if="colIndex === 0 && cycle.executions[0].publish_method === 'taf'">
+    <div v-else-if="colIndex === 0 && cycle.executions[0].publish_method === 'taf' && this.$slots.default[0].text.length">
       <router-link
         :to="{
           name: 'executions',
@@ -15,7 +15,7 @@
             releaseID: releaseID,
             projectID: projectID,
             cycleID: cycle.id,
-            executionID: getID(cycle.name_slug),
+            executionID: getID(),
           },
         }"
         >{{ this.$slots.default[0].text }}</router-link
@@ -51,9 +51,9 @@ export default {
     },
   },
   methods: {
-    getID: function(name) {
-      console.log(this.cycle.executions[0].id);
-      return this.cycle.executions[0].id;
+    getID: function() {
+      console.log(this.cycle.executions.filter(execution => execution.name === this.$slots.default[0].text)[0].id);
+      return this.cycle.executions.filter(execution => execution.name === this.$slots.default[0].text)[0].id;
     },
   },
 };
