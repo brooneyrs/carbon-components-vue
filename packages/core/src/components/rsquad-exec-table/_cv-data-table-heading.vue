@@ -5,7 +5,9 @@
       <ArrowDown16 class="bx--table-sort__icon" />
       <Arrows16 class="bx--table-sort__icon-unsorted" />
     </button>
-    <cv-wrapper v-else-if="heading === 'Result' && filtered" :tag-type="headingLabelTag" class="bx--table-header-label">Result <filt/><filter </cv-wrapper>
+    <cv-wrapper v-else-if="heading === 'Result' && filtered" :tag-type="headingLabelTag" class="bx--table-header-label"
+      >Result <filt
+    /></cv-wrapper>
     <cv-wrapper v-else :tag-type="headingLabelTag" class="bx--table-header-label">{{ heading }}</cv-wrapper>
   </th>
 </template>
@@ -14,7 +16,7 @@
 import ArrowDown16 from '@rocketsoftware/icons-vue/es/arrow--down/16';
 import Arrows16 from '@rocketsoftware/icons-vue/es/arrows/16';
 import CvWrapper from '../cv-wrapper/_cv-wrapper';
-import filt from '@rocketsoftware/icons-vue/es/filter/16'
+import filt from '@rocketsoftware/icons-vue/es/filter/16';
 
 const nextSortOrder = {
   ascending: 'descending',
@@ -26,7 +28,7 @@ export default {
   name: 'CvDataTableHeading',
   components: { ArrowDown16, Arrows16, CvWrapper, filt },
   props: {
-    filtered: {type: Boolean, default: false},
+    filtered: { type: Boolean, default: false },
     heading: { type: String, required: true },
     sortable: Boolean,
     order: { type: String, default: 'none' },
