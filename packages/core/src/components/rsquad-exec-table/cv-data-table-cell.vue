@@ -13,11 +13,18 @@
 </template>
 
 <script>
+import CvTag from "../cv-tag/cv-tag";
 export default {
   name: 'CvDataTableCell',
-  data() {return {filts: ["passed", "xpassed", "failed", "xfailed", "error", "skipped"]}},
   props: {
-    cellStyle: {}
+    cellStyle: {},
+    filts: {
+      type: [String, String, String, String, String, String],
+      default: ["passed", "xpassed", "failed", "xfailed", "error", "skipped"]
+    }
   },
+  components: {
+    CvTag
+  }
 };
 </script>
